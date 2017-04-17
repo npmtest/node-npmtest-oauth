@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-oauth/oauth/lib/oauth2.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-oauth/node_modules/oauth/lib/oauth2.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-oauth">npmtest-oauth (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-oauth/oauth/lib/oauth2.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-oauth/node_modules/oauth/lib/oauth2.js</span></h1>
     <h2>
         
         Statements: <span class="metric">13.91% <small>(16 / 115)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-oauth/oauth/lib/</a> &#187; oauth2.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-oauth/node_modules/oauth/lib/</a> » oauth2.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -679,25 +677,25 @@
     URL= require('url'),
     OAuthUtils= require('./_utils');
 &nbsp;
-exports.OAuth2= <span class="fstat-no" title="function not covered" >function(clientId, clientSecret, baseSite, authorizePath, accessTokenPath, customHeaders) {</span>
-<span class="cstat-no" title="statement not covered" >  this._clientId= clientId;</span>
-<span class="cstat-no" title="statement not covered" >  this._clientSecret= clientSecret;</span>
-<span class="cstat-no" title="statement not covered" >  this._baseSite= baseSite;</span>
-<span class="cstat-no" title="statement not covered" >  this._authorizeUrl= authorizePath || "/oauth/authorize";</span>
-<span class="cstat-no" title="statement not covered" >  this._accessTokenUrl= accessTokenPath || "/oauth/access_token";</span>
-<span class="cstat-no" title="statement not covered" >  this._accessTokenName= "access_token";</span>
-<span class="cstat-no" title="statement not covered" >  this._authMethod= "Bearer";</span>
-<span class="cstat-no" title="statement not covered" >  this._customHeaders = customHeaders || {};</span>
-<span class="cstat-no" title="statement not covered" >  this._useAuthorizationHeaderForGET= false;</span>
+exports.OAuth2= <span class="fstat-no" title="function not covered">function(clientId, clientSecret, baseSite, authorizePath, accessTokenPath, customHeaders) {</span>
+<span class="cstat-no" title="statement not covered">  this._clientId= clientId;</span>
+<span class="cstat-no" title="statement not covered">  this._clientSecret= clientSecret;</span>
+<span class="cstat-no" title="statement not covered">  this._baseSite= baseSite;</span>
+<span class="cstat-no" title="statement not covered">  this._authorizeUrl= authorizePath || "/oauth/authorize";</span>
+<span class="cstat-no" title="statement not covered">  this._accessTokenUrl= accessTokenPath || "/oauth/access_token";</span>
+<span class="cstat-no" title="statement not covered">  this._accessTokenName= "access_token";</span>
+<span class="cstat-no" title="statement not covered">  this._authMethod= "Bearer";</span>
+<span class="cstat-no" title="statement not covered">  this._customHeaders = customHeaders || {};</span>
+<span class="cstat-no" title="statement not covered">  this._useAuthorizationHeaderForGET= false;</span>
 &nbsp;
   //our agent
-<span class="cstat-no" title="statement not covered" >  this._agent = undefined;</span>
+<span class="cstat-no" title="statement not covered">  this._agent = undefined;</span>
 };
 &nbsp;
 // Allows you to set an agent to use instead of the default HTTP or
 // HTTPS agents. Useful when dealing with your own certificates.
-exports.OAuth2.prototype.setAgent = <span class="fstat-no" title="function not covered" >function(agent) {</span>
-<span class="cstat-no" title="statement not covered" >  this._agent = agent;</span>
+exports.OAuth2.prototype.setAgent = <span class="fstat-no" title="function not covered">function(agent) {</span>
+<span class="cstat-no" title="statement not covered">  this._agent = agent;</span>
 };
 &nbsp;
 // This 'hack' method is required for sites that don't use
@@ -705,85 +703,85 @@ exports.OAuth2.prototype.setAgent = <span class="fstat-no" title="function not c
 // ( http://tools.ietf.org/html/draft-ietf-oauth-v2-16#section-7 )
 // it isn't clear what the correct value should be atm, so allowing
 // for specific (temporary?) override for now.
-exports.OAuth2.prototype.setAccessTokenName= <span class="fstat-no" title="function not covered" >function ( name ) {</span>
-<span class="cstat-no" title="statement not covered" >  this._accessTokenName= name;</span>
+exports.OAuth2.prototype.setAccessTokenName= <span class="fstat-no" title="function not covered">function ( name ) {</span>
+<span class="cstat-no" title="statement not covered">  this._accessTokenName= name;</span>
 }
 &nbsp;
 // Sets the authorization method for Authorization header.
 // e.g. Authorization: Bearer &lt;token&gt;  # "Bearer" is the authorization method.
-exports.OAuth2.prototype.setAuthMethod = <span class="fstat-no" title="function not covered" >function ( authMethod ) {</span>
-<span class="cstat-no" title="statement not covered" >  this._authMethod = authMethod;</span>
+exports.OAuth2.prototype.setAuthMethod = <span class="fstat-no" title="function not covered">function ( authMethod ) {</span>
+<span class="cstat-no" title="statement not covered">  this._authMethod = authMethod;</span>
 };
 &nbsp;
 &nbsp;
 // If you use the OAuth2 exposed 'get' method (and don't construct your own _request call )
 // this will specify whether to use an 'Authorize' header instead of passing the access_token as a query parameter
-exports.OAuth2.prototype.useAuthorizationHeaderforGET = <span class="fstat-no" title="function not covered" >function(useIt) {</span>
-<span class="cstat-no" title="statement not covered" >  this._useAuthorizationHeaderForGET= useIt;</span>
+exports.OAuth2.prototype.useAuthorizationHeaderforGET = <span class="fstat-no" title="function not covered">function(useIt) {</span>
+<span class="cstat-no" title="statement not covered">  this._useAuthorizationHeaderForGET= useIt;</span>
 }
 &nbsp;
-exports.OAuth2.prototype._getAccessTokenUrl= <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  return this._baseSite + this._accessTokenUrl; </span>/* + "?" + querystring.stringify(params); */
+exports.OAuth2.prototype._getAccessTokenUrl= <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  return this._baseSite + this._accessTokenUrl; </span>/* + "?" + querystring.stringify(params); */
 }
 &nbsp;
 // Build the authorization header. In particular, build the part after the colon.
 // e.g. Authorization: Bearer &lt;token&gt;  # Build "Bearer &lt;token&gt;"
-exports.OAuth2.prototype.buildAuthHeader= <span class="fstat-no" title="function not covered" >function(token) {</span>
-<span class="cstat-no" title="statement not covered" >  return this._authMethod + ' ' + token;</span>
+exports.OAuth2.prototype.buildAuthHeader= <span class="fstat-no" title="function not covered">function(token) {</span>
+<span class="cstat-no" title="statement not covered">  return this._authMethod + ' ' + token;</span>
 };
 &nbsp;
-exports.OAuth2.prototype._chooseHttpLibrary= <span class="fstat-no" title="function not covered" >function( parsedUrl ) {</span>
-<span class="cstat-no" title="statement not covered" >  var http_library= https;</span>
+exports.OAuth2.prototype._chooseHttpLibrary= <span class="fstat-no" title="function not covered">function( parsedUrl ) {</span>
+<span class="cstat-no" title="statement not covered">  var http_library= https;</span>
   // As this is OAUth2, we *assume* https unless told explicitly otherwise.
-<span class="cstat-no" title="statement not covered" >  if( parsedUrl.protocol != "https:" ) {</span>
-<span class="cstat-no" title="statement not covered" >    http_library= http;</span>
+<span class="cstat-no" title="statement not covered">  if( parsedUrl.protocol != "https:" ) {</span>
+<span class="cstat-no" title="statement not covered">    http_library= http;</span>
   }
-<span class="cstat-no" title="statement not covered" >  return http_library;</span>
+<span class="cstat-no" title="statement not covered">  return http_library;</span>
 };
 &nbsp;
-exports.OAuth2.prototype._request= <span class="fstat-no" title="function not covered" >function(method, url, headers, post_body, access_token, callback) {</span>
+exports.OAuth2.prototype._request= <span class="fstat-no" title="function not covered">function(method, url, headers, post_body, access_token, callback) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var parsedUrl= URL.parse( url, true );</span>
-<span class="cstat-no" title="statement not covered" >  if( parsedUrl.protocol == "https:" &amp;&amp; !parsedUrl.port ) {</span>
-<span class="cstat-no" title="statement not covered" >    parsedUrl.port= 443;</span>
+<span class="cstat-no" title="statement not covered">  var parsedUrl= URL.parse( url, true );</span>
+<span class="cstat-no" title="statement not covered">  if( parsedUrl.protocol == "https:" &amp;&amp; !parsedUrl.port ) {</span>
+<span class="cstat-no" title="statement not covered">    parsedUrl.port= 443;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var http_library= this._chooseHttpLibrary( parsedUrl );</span>
+<span class="cstat-no" title="statement not covered">  var http_library= this._chooseHttpLibrary( parsedUrl );</span>
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var realHeaders= {};</span>
-<span class="cstat-no" title="statement not covered" >  for( var key in this._customHeaders ) {</span>
-<span class="cstat-no" title="statement not covered" >    realHeaders[key]= this._customHeaders[key];</span>
+<span class="cstat-no" title="statement not covered">  var realHeaders= {};</span>
+<span class="cstat-no" title="statement not covered">  for( var key in this._customHeaders ) {</span>
+<span class="cstat-no" title="statement not covered">    realHeaders[key]= this._customHeaders[key];</span>
   }
-<span class="cstat-no" title="statement not covered" >  if( headers ) {</span>
-<span class="cstat-no" title="statement not covered" >    for(var key in headers) {</span>
-<span class="cstat-no" title="statement not covered" >      realHeaders[key] = headers[key];</span>
+<span class="cstat-no" title="statement not covered">  if( headers ) {</span>
+<span class="cstat-no" title="statement not covered">    for(var key in headers) {</span>
+<span class="cstat-no" title="statement not covered">      realHeaders[key] = headers[key];</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  realHeaders['Host']= parsedUrl.host;</span>
+<span class="cstat-no" title="statement not covered">  realHeaders['Host']= parsedUrl.host;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!realHeaders['User-Agent']) {</span>
-<span class="cstat-no" title="statement not covered" >    realHeaders['User-Agent'] = 'Node-oauth';</span>
+<span class="cstat-no" title="statement not covered">  if (!realHeaders['User-Agent']) {</span>
+<span class="cstat-no" title="statement not covered">    realHeaders['User-Agent'] = 'Node-oauth';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if( post_body ) {</span>
-<span class="cstat-no" title="statement not covered" >      if ( Buffer.isBuffer(post_body) ) {</span>
-<span class="cstat-no" title="statement not covered" >          realHeaders["Content-Length"]= post_body.length;</span>
+<span class="cstat-no" title="statement not covered">  if( post_body ) {</span>
+<span class="cstat-no" title="statement not covered">      if ( Buffer.isBuffer(post_body) ) {</span>
+<span class="cstat-no" title="statement not covered">          realHeaders["Content-Length"]= post_body.length;</span>
       } else {
-<span class="cstat-no" title="statement not covered" >          realHeaders["Content-Length"]= Buffer.byteLength(post_body);</span>
+<span class="cstat-no" title="statement not covered">          realHeaders["Content-Length"]= Buffer.byteLength(post_body);</span>
       }
   } else {
-<span class="cstat-no" title="statement not covered" >      realHeaders["Content-length"]= 0;</span>
+<span class="cstat-no" title="statement not covered">      realHeaders["Content-length"]= 0;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if( access_token &amp;&amp; !('Authorization' in realHeaders)) {</span>
-<span class="cstat-no" title="statement not covered" >    if( ! parsedUrl.query ) <span class="cstat-no" title="statement not covered" >parsedUrl.query= {};</span></span>
-<span class="cstat-no" title="statement not covered" >    parsedUrl.query[this._accessTokenName]= access_token;</span>
+<span class="cstat-no" title="statement not covered">  if( access_token &amp;&amp; !('Authorization' in realHeaders)) {</span>
+<span class="cstat-no" title="statement not covered">    if( ! parsedUrl.query ) <span class="cstat-no" title="statement not covered">parsedUrl.query= {};</span></span>
+<span class="cstat-no" title="statement not covered">    parsedUrl.query[this._accessTokenName]= access_token;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var queryStr= querystring.stringify(parsedUrl.query);</span>
-<span class="cstat-no" title="statement not covered" >  if( queryStr ) <span class="cstat-no" title="statement not covered" >queryStr=  "?" + queryStr;</span></span>
-<span class="cstat-no" title="statement not covered" >  var options = {</span>
+<span class="cstat-no" title="statement not covered">  var queryStr= querystring.stringify(parsedUrl.query);</span>
+<span class="cstat-no" title="statement not covered">  if( queryStr ) <span class="cstat-no" title="statement not covered">queryStr=  "?" + queryStr;</span></span>
+<span class="cstat-no" title="statement not covered">  var options = {</span>
     host:parsedUrl.hostname,
     port: parsedUrl.port,
     path: parsedUrl.pathname + queryStr,
@@ -791,121 +789,122 @@ exports.OAuth2.prototype._request= <span class="fstat-no" title="function not co
     headers: realHeaders
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._executeRequest( http_library, options, post_body, callback );</span>
+<span class="cstat-no" title="statement not covered">  this._executeRequest( http_library, options, post_body, callback );</span>
 }
 &nbsp;
-exports.OAuth2.prototype._executeRequest= <span class="fstat-no" title="function not covered" >function( http_library, options, post_body, callback ) {</span>
+exports.OAuth2.prototype._executeRequest= <span class="fstat-no" title="function not covered">function( http_library, options, post_body, callback ) {</span>
   // Some hosts *cough* google appear to close the connection early / send no content-length header
   // allow this behaviour.
-<span class="cstat-no" title="statement not covered" >  var allowEarlyClose= OAuthUtils.isAnEarlyCloseHost(options.host);</span>
-<span class="cstat-no" title="statement not covered" >  var callbackCalled= false;</span>
-<span class="fstat-no" title="function not covered" >  function passBackControl( response, result ) {</span>
-<span class="cstat-no" title="statement not covered" >    if(!callbackCalled) {</span>
-<span class="cstat-no" title="statement not covered" >      callbackCalled=true;</span>
-<span class="cstat-no" title="statement not covered" >      if( !(response.statusCode &gt;= 200 &amp;&amp; response.statusCode &lt;= 299) &amp;&amp; (response.statusCode != 301) &amp;&amp; (response.statusCode != 302) ) {</span>
-<span class="cstat-no" title="statement not covered" >        callback({ statusCode: response.statusCode, data: result });</span>
+<span class="cstat-no" title="statement not covered">  var allowEarlyClose= OAuthUtils.isAnEarlyCloseHost(options.host);</span>
+<span class="cstat-no" title="statement not covered">  var callbackCalled= false;</span>
+<span class="fstat-no" title="function not covered">  function passBackControl( response, result ) {</span>
+<span class="cstat-no" title="statement not covered">    if(!callbackCalled) {</span>
+<span class="cstat-no" title="statement not covered">      callbackCalled=true;</span>
+<span class="cstat-no" title="statement not covered">      if( !(response.statusCode &gt;= 200 &amp;&amp; response.statusCode &lt;= 299) &amp;&amp; (response.statusCode != 301) &amp;&amp; (response.statusCode != 302) ) {</span>
+<span class="cstat-no" title="statement not covered">        callback({ statusCode: response.statusCode, data: result });</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        callback(null, result, response);</span>
+<span class="cstat-no" title="statement not covered">        callback(null, result, response);</span>
       }
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var result= "";</span>
+<span class="cstat-no" title="statement not covered">  var result= "";</span>
 &nbsp;
   //set the agent on the request options
-<span class="cstat-no" title="statement not covered" >  if (this._agent) {</span>
-<span class="cstat-no" title="statement not covered" >    options.agent = this._agent;</span>
+<span class="cstat-no" title="statement not covered">  if (this._agent) {</span>
+<span class="cstat-no" title="statement not covered">    options.agent = this._agent;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var request = http_library.request(options);</span>
-<span class="cstat-no" title="statement not covered" >  request.on('response', <span class="fstat-no" title="function not covered" >function (response) {</span></span>
-<span class="cstat-no" title="statement not covered" >    response.on("data", <span class="fstat-no" title="function not covered" >function (chunk) {</span></span>
-<span class="cstat-no" title="statement not covered" >      result+= chunk</span>
+<span class="cstat-no" title="statement not covered">  var request = http_library.request(options);</span>
+<span class="cstat-no" title="statement not covered">  request.on('response', <span class="fstat-no" title="function not covered">function (response) {</span></span>
+<span class="cstat-no" title="statement not covered">    response.on("data", <span class="fstat-no" title="function not covered">function (chunk) {</span></span>
+<span class="cstat-no" title="statement not covered">      result+= chunk</span>
     });
-<span class="cstat-no" title="statement not covered" >    response.on("close", <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if( allowEarlyClose ) {</span>
-<span class="cstat-no" title="statement not covered" >        passBackControl( response, result );</span>
+<span class="cstat-no" title="statement not covered">    response.on("close", <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">      if( allowEarlyClose ) {</span>
+<span class="cstat-no" title="statement not covered">        passBackControl( response, result );</span>
       }
     });
-<span class="cstat-no" title="statement not covered" >    response.addListener("end", <span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >      passBackControl( response, result );</span>
+<span class="cstat-no" title="statement not covered">    response.addListener("end", <span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">      passBackControl( response, result );</span>
     });
   });
-<span class="cstat-no" title="statement not covered" >  request.on('error', <span class="fstat-no" title="function not covered" >function(e) {</span></span>
-<span class="cstat-no" title="statement not covered" >    callbackCalled= true;</span>
-<span class="cstat-no" title="statement not covered" >    callback(e);</span>
+<span class="cstat-no" title="statement not covered">  request.on('error', <span class="fstat-no" title="function not covered">function(e) {</span></span>
+<span class="cstat-no" title="statement not covered">    callbackCalled= true;</span>
+<span class="cstat-no" title="statement not covered">    callback(e);</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if( (options.method == 'POST' || options.method == 'PUT') &amp;&amp; post_body ) {</span>
-<span class="cstat-no" title="statement not covered" >     request.write(post_body);</span>
+<span class="cstat-no" title="statement not covered">  if( (options.method == 'POST' || options.method == 'PUT') &amp;&amp; post_body ) {</span>
+<span class="cstat-no" title="statement not covered">     request.write(post_body);</span>
   }
-<span class="cstat-no" title="statement not covered" >  request.end();</span>
+<span class="cstat-no" title="statement not covered">  request.end();</span>
 }
 &nbsp;
-exports.OAuth2.prototype.getAuthorizeUrl= <span class="fstat-no" title="function not covered" >function( params ) {</span>
-<span class="cstat-no" title="statement not covered" >  var params= params || {};</span>
-<span class="cstat-no" title="statement not covered" >  params['client_id'] = this._clientId;</span>
-<span class="cstat-no" title="statement not covered" >  return this._baseSite + this._authorizeUrl + "?" + querystring.stringify(params);</span>
+exports.OAuth2.prototype.getAuthorizeUrl= <span class="fstat-no" title="function not covered">function( params ) {</span>
+<span class="cstat-no" title="statement not covered">  var params= params || {};</span>
+<span class="cstat-no" title="statement not covered">  params['client_id'] = this._clientId;</span>
+<span class="cstat-no" title="statement not covered">  return this._baseSite + this._authorizeUrl + "?" + querystring.stringify(params);</span>
 }
 &nbsp;
-exports.OAuth2.prototype.getOAuthAccessToken= <span class="fstat-no" title="function not covered" >function(code, params, callback) {</span>
-<span class="cstat-no" title="statement not covered" >  var params= params || {};</span>
-<span class="cstat-no" title="statement not covered" >  params['client_id'] = this._clientId;</span>
-<span class="cstat-no" title="statement not covered" >  params['client_secret'] = this._clientSecret;</span>
-<span class="cstat-no" title="statement not covered" >  var codeParam = (params.grant_type === 'refresh_token') ? 'refresh_token' : 'code';</span>
-<span class="cstat-no" title="statement not covered" >  params[codeParam]= code;</span>
+exports.OAuth2.prototype.getOAuthAccessToken= <span class="fstat-no" title="function not covered">function(code, params, callback) {</span>
+<span class="cstat-no" title="statement not covered">  var params= params || {};</span>
+<span class="cstat-no" title="statement not covered">  params['client_id'] = this._clientId;</span>
+<span class="cstat-no" title="statement not covered">  params['client_secret'] = this._clientSecret;</span>
+<span class="cstat-no" title="statement not covered">  var codeParam = (params.grant_type === 'refresh_token') ? 'refresh_token' : 'code';</span>
+<span class="cstat-no" title="statement not covered">  params[codeParam]= code;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var post_data= querystring.stringify( params );</span>
-<span class="cstat-no" title="statement not covered" >  var post_headers= {</span>
+<span class="cstat-no" title="statement not covered">  var post_data= querystring.stringify( params );</span>
+<span class="cstat-no" title="statement not covered">  var post_headers= {</span>
        'Content-Type': 'application/x-www-form-urlencoded'
    };
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._request("POST", this._getAccessTokenUrl(), post_headers, post_data, null, <span class="fstat-no" title="function not covered" >function(error, data, response) {</span></span>
-<span class="cstat-no" title="statement not covered" >    if( error )  <span class="cstat-no" title="statement not covered" >callback(error);</span></span>
+<span class="cstat-no" title="statement not covered">  this._request("POST", this._getAccessTokenUrl(), post_headers, post_data, null, <span class="fstat-no" title="function not covered">function(error, data, response) {</span></span>
+<span class="cstat-no" title="statement not covered">    if( error )  <span class="cstat-no" title="statement not covered">callback(error);</span></span>
     else {
-<span class="cstat-no" title="statement not covered" >      var results;</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered">      var results;</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
         // As of http://tools.ietf.org/html/draft-ietf-oauth-v2-07
         // responses should be in JSON
-<span class="cstat-no" title="statement not covered" >        results= JSON.parse( data );</span>
+<span class="cstat-no" title="statement not covered">        results= JSON.parse( data );</span>
       }
       catch(e) {
         // .... However both Facebook + Github currently use rev05 of the spec
         // and neither seem to specify a content-type correctly in their response headers :(
         // clients of these services will suffer a *minor* performance cost of the exception
         // being thrown
-<span class="cstat-no" title="statement not covered" >        results= querystring.parse( data );</span>
+<span class="cstat-no" title="statement not covered">        results= querystring.parse( data );</span>
       }
-<span class="cstat-no" title="statement not covered" >      var access_token= results["access_token"];</span>
-<span class="cstat-no" title="statement not covered" >      var refresh_token= results["refresh_token"];</span>
-<span class="cstat-no" title="statement not covered" >      delete results["refresh_token"];</span>
-<span class="cstat-no" title="statement not covered" >      callback(null, access_token, refresh_token, results); </span>// callback results =-=
+<span class="cstat-no" title="statement not covered">      var access_token= results["access_token"];</span>
+<span class="cstat-no" title="statement not covered">      var refresh_token= results["refresh_token"];</span>
+<span class="cstat-no" title="statement not covered">      delete results["refresh_token"];</span>
+<span class="cstat-no" title="statement not covered">      callback(null, access_token, refresh_token, results); </span>// callback results =-=
     }
   });
 }
 &nbsp;
 // Deprecated
-exports.OAuth2.prototype.getProtectedResource= <span class="fstat-no" title="function not covered" >function(url, access_token, callback) {</span>
-<span class="cstat-no" title="statement not covered" >  this._request("GET", url, {}, "", access_token, callback );</span>
+exports.OAuth2.prototype.getProtectedResource= <span class="fstat-no" title="function not covered">function(url, access_token, callback) {</span>
+<span class="cstat-no" title="statement not covered">  this._request("GET", url, {}, "", access_token, callback );</span>
 }
 &nbsp;
-exports.OAuth2.prototype.get= <span class="fstat-no" title="function not covered" >function(url, access_token, callback) {</span>
-<span class="cstat-no" title="statement not covered" >  if( this._useAuthorizationHeaderForGET ) {</span>
-<span class="cstat-no" title="statement not covered" >    var headers= {'Authorization': this.buildAuthHeader(access_token) }</span>
-<span class="cstat-no" title="statement not covered" >    access_token= null;</span>
+exports.OAuth2.prototype.get= <span class="fstat-no" title="function not covered">function(url, access_token, callback) {</span>
+<span class="cstat-no" title="statement not covered">  if( this._useAuthorizationHeaderForGET ) {</span>
+<span class="cstat-no" title="statement not covered">    var headers= {'Authorization': this.buildAuthHeader(access_token) }</span>
+<span class="cstat-no" title="statement not covered">    access_token= null;</span>
   }
   else {
-<span class="cstat-no" title="statement not covered" >    headers= {};</span>
+<span class="cstat-no" title="statement not covered">    headers= {};</span>
   }
-<span class="cstat-no" title="statement not covered" >  this._request("GET", url, headers, "", access_token, callback );</span>
+<span class="cstat-no" title="statement not covered">  this._request("GET", url, headers, "", access_token, callback );</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 09:58:08 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 22:04:57 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
