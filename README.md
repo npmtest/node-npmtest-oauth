@@ -1,4 +1,7 @@
-# test coverage for  [oauth (v0.9.15)](https://github.com/ciaranj/node-oauth#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-oauth.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-oauth) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-oauth.svg)](https://travis-ci.org/npmtest/node-npmtest-oauth)
+# npmtest-oauth
+
+#### basic test coverage for  [oauth (v0.9.15)](https://github.com/ciaranj/node-oauth#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-oauth.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-oauth) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-oauth.svg)](https://travis-ci.org/npmtest/node-npmtest-oauth)
+
 #### Library for interacting with OAuth 1.0, 1.0A, 2 and Echo.  Provides simplified client access and allows for construction of more complex apis and OAuth providers.
 
 [![NPM](https://nodei.co/npm/oauth.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/oauth)
@@ -68,7 +71,8 @@
     "scripts": {
         "test": "make test"
     },
-    "version": "0.9.15"
+    "version": "0.9.15",
+    "bin": {}
 }
 ```
 
